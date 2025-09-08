@@ -1,15 +1,12 @@
-import { useEffect, useState } from "react";
-import reactLogo from "./assets/react.svg";
-import { RxCross2 } from "react-icons/rx";
-import viteLogo from "/vite.svg";
-import Cards from "./Components/Cards";
 import "./App.css";
-function App() {
+import { Provider } from "react-redux";
+import { store } from "./Redux/store";
+import Cards from "./Components/Cards";
+const App = () => {
   return (
-    <>
-      <Cards></Cards>
-    </>
+    <Provider store={store}>
+      <Cards />
+    </Provider>
   );
-}
-
+};
 export default App;
